@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "default": "confirmacionesevento-44ba5",
+    "firebase use --add": "confirmacionesevento-44ba5",
+    "form-gen": "confirmacionesevento-44ba5"
+  },
+  "targets": {
+    "confirmacionesevento-44ba5": {
+      "hosting": {
+        "form-gen": [
+          "form-gen"
+        ],
+        "invitacion-cn": [
+          "invitacion-cn"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

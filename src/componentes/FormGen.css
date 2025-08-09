@@ -1,0 +1,406 @@
+/* MARK: FormGen */
+.App {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+
+.pagina {
+  max-width: 1500px;      /* 💡 Controla el ancho máximo general */
+  margin: 0 auto;         /* 🧭 Centra horizontalmente */
+  padding: 1rem;          /* 🧱 Evita que toque los bordes en móvil */
+  box-sizing: border-box; /* 📦 Incluye padding en el cálculo del ancho */
+  background-color: #f3f3f3;
+}
+
+.text{
+    text-align: center;
+}
+
+/* Centrar la sección en toda la página */
+#asistencia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Ocupar toda la pantalla */
+  background-color: #f3f3f3; /* Color de fondo */
+}
+
+/* Dar estilo a la carta */
+.card {
+  background-color: white;
+  padding: 50px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  max-width: 700px; /* Limitar el ancho */
+  width: 100%;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  gap: 15px; /* Espaciado entre elementos */
+}
+
+input, button {
+  padding: 10px 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #fefcf5;
+  outline: none;
+}
+
+
+/* Botón con estilo */
+button {
+  background: #c2a500;
+  color: #ffffff;
+  font-weight: bolder;
+  border: color(255 255 255 255);
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:active {
+  background-color: #564900;
+}
+
+/* MARK: Tablas */
+/* 🌟 Estilo general de tablas */
+.tabla-invitaciones,
+.tabla-invitaciones2 {
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.desing-table{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f3f3f3;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 1500px; /* Limitar el ancho */
+  width: 100%;
+}
+
+h2.table {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+
+}
+
+/* 🧱 Encabezado */
+.tabla-invitaciones thead,
+.tabla-invitaciones2 thead {
+  background-color: #fdd835; /* amarillo brillante */
+  color: #111;
+  font-weight: bold;
+}
+
+.tabla-invitaciones th,
+.tabla-invitaciones td,
+.tabla-invitaciones2 th,
+.tabla-invitaciones2 td  {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* 🎨 Alternancia de filas */
+.tabla-invitaciones tbody tr:nth-child(even),
+.tabla-invitaciones2 tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-invitaciones tbody tr:hover,
+.tabla-invitaciones2 tbody tr:hover {
+  background-color: #ffe082;
+  transition: background 0.5s ease;
+}
+
+/* 🖱️ Estilo de botones */
+.tabla-invitaciones2 button{
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: #039be5;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tabla-invitaciones2 button:active {
+  background-color: #0288d1;
+}
+
+@media screen and (max-width: 480px) {
+  .desing-table {
+    max-width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .tabla-invitaciones2 {
+    max-height: calc(3rem * 10); /* 10 filas de altura aprox. */
+    width: 100%;
+    font-size: 0.85rem; /* Tamaño de fuente más compacto */
+    overflow: auto;
+    display: block;
+  }
+
+  .tabla-invitaciones2 th,
+  .tabla-invitaciones2 td {
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .tabla-invitaciones2 button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+.tabla-scroll {
+  max-height: calc(3rem * 10); /* 10 filas de altura aprox. */
+  overflow-y: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Opcional: Estilo para barra de desplazamiento en navegadores modernos */
+.tabla-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tabla-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+
+/* MARK: Iframe */
+/* 🖼️ Contenedor del iframe */
+.contenedor-iframe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 🏷️ Título centrado */
+.titulo-iframe {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 🪟 Estilo del iframe */
+.iframe-preview {
+  width: 320px;
+  height: 608px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+@media (hover: none) {
+  .tabla-invitaciones button:hover {
+    background-color: #039be5; /* color normal sin hover */
+  }
+}
+
+/* MARK: Menu */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  padding: 6px 1px;
+  height: 100%;
+  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease, opacity 0.3s ease;
+  animation: sidebarFadeIn 0.5s ease;
+}
+
+@keyframes sidebarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar .logo_content .logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  color: #0b2997;
+  margin-top: 20px;
+  height: 80px;
+  width: 100%;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.sidebar .logo_content .logo .logo_name{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+
+}
+
+.sidebar #btn{
+  position: absolute;
+  color: #494949;
+  left: 90%;
+  top: 5px;
+  font-size: 24px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translate(-50%);
+}
+
+.sidebar i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.sidebar ul{
+  margin-top: 20px;
+
+}
+
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li a{
+  color: #494949;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+}
+
+.sidebar ul li a:active{
+  color: #0b2997;
+  background: #e7e9f5;
+
+}
+
+.sidebar.oculto {
+  width: 60px; /* solo muestra el botón */
+}
+
+.sidebar.oculto .logo_name,
+.sidebar.oculto ul {
+  display: none;
+}
+
+.sidebar.oculto .logo {
+  justify-content: center;
+}
+
+
+.toggle-menu {
+  position: fixed;       /* 🔒 Fija el botón en la pantalla */
+  top: 3%;             /* 📍 Distancia desde arriba */
+  left: 3%;            /* 📍 Distancia desde la izquierda */
+  font-size: 24px;
+  color: #494949;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-menu:hover {
+  background-color: #e7e9f5;
+}
+
+/* MARK: Load */
+.loader-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #B8860B	;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #e7e9f5;
+  border-top: 6px solid #B8860B	;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FormGen.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="asistencia">
+        <div class="card">
+            <h1>Genera tus Invitaciones</h1>
+            <h2>Agrega un numero de boletos por Invitacion</h2>
+            <form id="formConfirmacion">
+                <label>Nombre de la Familia:</label>
+                <input type="text" id="nombre" required>
+        
+                <label>Número de Invitados:</label>
+                <input type="number" id="invitados" value="1" min="1" required>
+        
+                <button type="submit">Generar Invitación</button>
+            </form>
+            
+            <p id="mensaje"></p>
+        </div>
+    </section>
+    
+    <script>
+    document.getElementById("formConfirmacion").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        let nombre = document.getElementById("nombre").value;
+        let invitados = document.getElementById("invitados").value;
+    
+        // Generar un enlace único con los datos ingresados
+        let idInvitacion = Date.now(); 
+        let linkInvitacion = `https://tuweb.com/invitacion?id=${idInvitacion}&nombre=${encodeURIComponent(nombre)}&invitados=${invitados}`;
+    
+        document.getElementById("mensaje").innerHTML = `Tu invitación ha sido generada: <a href="${linkInvitacion}" target="_blank">${linkInvitacion}</a>`;
+    });
+    </script>
+    
+</body>
+</html>

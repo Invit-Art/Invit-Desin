@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/logoInvit.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Invitaciones digitales elegantes para eventos únicos."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logoInvit.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FormGen</title>
+  </head>
+  <!-- 🛑 Mensaje visual de protección -->
+<div id="proteccion-msg" style="
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: #111;
+  color: #fdd835;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  z-index: 10;
+  border-bottom: 3px solid #fdd835;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+">
+  ⚠️ Contenido protegido ⚠️
+</div>
+
+<!-- 🔒 Script para bloquear acciones comunes -->
+<!--<script>
+  function mostrarProteccion() {
+    const el = document.getElementById("proteccion-msg");
+    el.style.display = "block";
+    setTimeout(() => {
+      el.style.display = "none";
+    }, 4000); // ⏳ Ocultar después de 4 segundos
+  }
+
+  // 🚫 Bloquear clic derecho
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    mostrarProteccion();
+  });
+
+  // 🚫 Bloquear combinaciones de teclas comunes
+  document.addEventListener("keydown", function (e) {
+    const tecla = e.key.toLowerCase();
+    const bloqueadas = [
+      "f12",
+      "u", // Ctrl + U
+      "i", // Ctrl + Shift + I
+      "c", // Ctrl + Shift + C
+      "j"  // Ctrl + Shift + J
+    ];
+
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && bloqueadas.includes(tecla)) ||
+      (e.ctrlKey && tecla === "u")
+    ) {
+      e.preventDefault();
+      mostrarProteccion();
+    }
+  });
+</script> -->
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fondo-login {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden
+}
+
+.fondo-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/media/invitacion1/NetFond.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+
+.wrapper {
+  width: 100%;
+  max-width: 22rem;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+form h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 2.5rem; /* Espacio para el ícono */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  z-index: 100;
+}
+
+.toggle-password:hover {
+  color: #fff;
+}
+
+
+/* Campos de entrada con etiqueta flotante */
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 1rem 0;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  margin: 0rem 0;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 3rem;
+  padding-top: 3rem; /* 🟢 Agregado */
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0.5rem;
+  font-size: 0.85rem;
+  transform: translateY(0);
+}
+
+/* Sección de contraseña y opciones */
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+#remember {
+  accent-color: #fff;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label p {
+  margin-left: 0.5rem;
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+button.login {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:active.login {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.register {
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsivo adicional */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  form h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .input-field input {
+    height: 2.2rem;
+    font-size: 0.95rem;
+  }
+}
