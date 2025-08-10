@@ -13,8 +13,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/:categoria/:cliente/invitaciones" element={<Invitacion3 />} />
+      <Route path="/" element={<Invitacion3 />} />
+      <Route path="/:categoria/:cliente" element={<App />} />
     </Routes>
   </BrowserRouter>,
 );

@@ -303,7 +303,26 @@ function Invitacion3({ totalInvitadosInvitacion }) {
 
           {/* MARK: Regalos */}
           <AnimacionScroll className="MesaRegalos show-n-y">
-            <div className="banco">
+            <h2 className="ith2 textstyle">Mesa de Regalos</h2>
+            <Separador3/>
+            <p>Gracias por ser parte de este momento único. Si deseas regalarme algo
+              pero no tienes algo en mente aquí te dejamos algunas opciones disponibles:
+            </p>
+            <div className="Opciones">
+              <div className="Efectivo">
+                <img src={imagenes.Efectivo}></img>
+                <p>Efectivo</p>
+              </div>
+              <div className="Regalo">
+                <img src={imagenes.regalo}></img>
+                <p>Regalo</p>
+              </div>
+            </div>
+            <p className="Nota">Si deseas regalar efectivo, en el evento habrá una pequeña cajita con sobres
+              donde podrás dejar un gesto especial.
+            </p>
+
+            {/* <div className="banco">
               <h2 className="ith2 textstyle">Mesa de Regalos</h2>
               <Separador3/>
               <p>No es necesario estar cerca para hacer sentir el amor y cariño.
@@ -325,7 +344,7 @@ function Invitacion3({ totalInvitadosInvitacion }) {
               <button className="boton-copiar" onClick={copiarCuenta}>Copiar</button>
               <h2 className="textstyle">Beneficiaria:</h2>
               <h1 className="textstyle">Briseyda Ortega Vazquez</h1>
-            </div>
+            </div> */}
           </AnimacionScroll>
           <Separador3/>
           {/* MARK: Confirmacion */}

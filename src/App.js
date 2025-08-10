@@ -52,6 +52,7 @@ const App = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUsuarioActual(user);
+        setLinkPrevisualizacion(false);
       } else {
         setUsuarioActual(null);
       }
@@ -63,9 +64,29 @@ const App = () => {
 
   const handleLogout = () => {
     signOut(auth).then(() => {
+      // 🔄 Limpiar todos los estados relacionados con la sesión anterior
       setUsuarioActual(null);
+      setNombre("Invitado");
+      setInvitadosAdultos(1);
+      setInvitadosNiños(0);
+      setIncluirNiños(false);
+      setTotalInvitados(1);
+      setLinkGenerado("");
+      setLinkAcortado("");
+      setLinkPrevisualizacion(false); // 👈 este es el importante
+      setListaInvitaciones([]);
+      setNombreCliente("Invitado");
+      setCategoriaEvento("XV Años");
+      setMostrarMensaje(false);
+      setMenuVisible(false);
+
+      // 🧹 Limpiar localStorage si lo deseas
+      localStorage.removeItem("nombreInvitado");
+      localStorage.removeItem(`tieneAcceso_${usuarioActual?.email}`);
+      localStorage.removeItem(`fechaLimite_${usuarioActual?.email}`);
     });
   };
+
 
   // Mensaje Genrado y scroll
   useEffect(() => {
@@ -191,18 +212,6 @@ const App = () => {
 
     window.open(urlWhatsApp, "_blank");
   };
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUsuarioActual(user);
-      }
-      setVerificandoSesion(false); // ✅ Ahora sí puedes renderizar
-    });
-
-    return () => unsubscribe();
-  }, []);
-
 
   useEffect(() => {
     const validarAccesoPorFecha = async () => {

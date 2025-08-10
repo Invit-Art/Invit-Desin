@@ -54,7 +54,6 @@ const Login = ({ onLogin, setVerificandoSesion, setUsuarioActual }) => {
       setUsuarioActual(usuarioExtendido);
       onLogin(usuarioExtendido);
       setVerificandoSesion(false);
-      window.location.href = clienteData.rutaPersonalizada;
     } catch (err) {
       alert("❌ El correo o contraseña son incorrectos");
       setVerificandoSesion(false);

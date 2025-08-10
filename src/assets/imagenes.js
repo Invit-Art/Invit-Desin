@@ -4,6 +4,7 @@ import padres from "./media/Confirmar Asistencia/padres.png";
 import ceremonia from "./media/Confirmar Asistencia/ceremonia.png";
 import recepcion from "./media/Confirmar Asistencia/recepcion.png";
 import regalos from "./media/Confirmar Asistencia/regalos.png";
+import Efectivo from "./media/invitacion1/Efectivo.png";
 import mensaje from "./media/Confirmar Asistencia/mensaje.png";
 import confirmar from "./media/Confirmar Asistencia/confirmar.png";
 import AroFlor from "./media/invitacion1/AroFlor.png";
@@ -51,6 +52,7 @@ const imagenes = {
     ceremonia,
     recepcion,
     regalos,
+    Efectivo,
     vestimenta,
     mensaje,
     confirmar,
