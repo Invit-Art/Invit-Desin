@@ -11,12 +11,15 @@ import Invitacion3 from './Invitacion3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Invitacion3 />} />
-      <Route path="/:categoria/:cliente" element={<App />} />
-    </Routes>
-  </BrowserRouter>,
+<BrowserRouter> 
+  <Routes> 
+    {/* Para ti: Generar invitaciones */} 
+    <Route path="/" element={<App />} /> 
+    
+    {/* Para invitados: Ver la invitación con nombre */} 
+    <Route path="/:cliente/invitaciones" element={<Invitacion3 />} /> 
+  </Routes> 
+</BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

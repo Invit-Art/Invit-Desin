@@ -15,10 +15,12 @@
 
 :root{
     --espacio-arriba:5%;
-    --espacio-abajo:27%;
+    --espacio-abajo:18%;
     --separacion:7%;
     --color-principal: #fec9cf;
-    --text-shadow:#;
+    --color-sobre: #fec9cf;
+    --text-sello-shadow1: #823d3f9a;
+    --text-sello-shadow2: #7e141691;
     --padding-bottom: 10%;
 
     /* POSICIONES */
@@ -87,7 +89,7 @@
     --icono-itinerario-size: 9vw;
     
     /* ITINERARIO */
-    --itinerario-silueta-evento:rgba(255, 255, 255, 0.08);
+    --itinerario-silueta-evento:rgba(255, 100, 100, 0.175);
     --itinerario-silueta-icono: var(--boton-color);
     --itinerario-hora: #aa2748;
 
@@ -113,6 +115,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Coiny&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Kablammo:MORF@22&family=Miss+Fajardose&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&family=Rye&family=Sacramento&family=Tangerine:wght@400;700&display=swap');
 
 /* MARK: Animacion */
+
+.invitacion3{
+    background-color: #fec9cf;
+}
 
 /* Right to Left */
 .show-n-x{
@@ -237,7 +243,8 @@
     outline: none;
     cursor: pointer;
     transition: .2s ease-in-out;
-    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 193, 193, 0.5), 6px 6px 8px rgba(255, 255, 255, .075), 6px 6px 10px rgba(0, 0, 0, .15);
+    box-shadow: -6px -6px 14px var(--text-sello-shadow1), -6px -6px 10px var(--text-sello-shadow2), 6px 6px 8px rgba(255, 255, 255, .075), 6px 6px 10px rgba(0, 0, 0, .15);
+    -webkit-box-shadow: -6px -6px 14px var(--text-sello-shadow1), -6px -6px 10px var(--text-sello-shadow2), 6px 6px 8px rgba(255, 255, 255, .075), 6px 6px 10px rgba(0, 0, 0, .15);
     position: absolute;
     width: 200px;
     height: 200px;
@@ -305,7 +312,7 @@
     margin-top: -10%; 
 }
 
-h2.portada {
+.nombre-centrado h4.portada  {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra horizontalmente */
@@ -318,7 +325,7 @@ h2.portada {
     letter-spacing: 1px;
     font-weight: 600;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px, rgba(0, 0, 0, 0.75) 3px 3px 3px, rgba(0, 0, 0, 0.4) 3px 3px 3px, rgba(0, 0, 0, 0.2) -2px -2px 5px, rgba(0, 0, 0, 0.2) 1px 1px 1px !important;
-    color: var(--textos-color);
+    color : #fff; 
     line-height: 1;
     margin-top: 20%;
 }
@@ -327,6 +334,7 @@ h2.portada {
   display: block;
   text-align: center;
   justify-content: center;
+  color : #fff; 
   margin-top: 1rem;
 }
 
@@ -341,7 +349,7 @@ h5.click{
     letter-spacing: 1px;
     font-weight: 600;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px, rgba(0, 0, 0, 0.75) 3px 3px 3px, rgba(0, 0, 0, 0.4) 3px 3px 3px, rgba(0, 0, 0, 0.2) -2px -2px 5px, rgba(0, 0, 0, 0.2) 1px 1px 1px !important;
-    color: var(--textos-color);
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 5px;
     border-radius: 30px;
@@ -417,7 +425,7 @@ h3.evento{
     overflow-x: hidden;
     position: relative;
     margin: auto;
-    background: var(--color-rosa-pastel);
+    background: var(--color-principal);
     background-size: contain;
     background-position: center;
     width: 100%;
@@ -578,11 +586,11 @@ h3.evento{
     position: relative;
     bottom: 0px;
     left: 0%;
-    width: 200px; 
-    font-size: 1em;
-    background-color: #c474bfe1; /* Fondo transparente */
-    border: 3px solid #b100a5e1; /* Borde con color definido */
-    color: #63005ce1; /* Color del texto */
+    width: 190px; 
+    font-size: 0.9em;
+    background-color: #ff829f !important; /* Fondo transparente */
+    border: 3px solid #ff3164; /* Borde con color definido */
+    color: white; /* Color del texto */
     padding: 21px 14px;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -809,6 +817,12 @@ h1.reloj{
     font-size: var(--lugar);
     line-height: 1;
     color: var(--subtitulos-color);
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 1px, 
+    rgba(0, 0, 0, 0.5) 1px 1px 1px, 
+    rgba(0, 0, 0, 0.75) 3px 3px 3px, 
+    rgba(0, 0, 0, 0.4) 3px 3px 3px, 
+    rgba(0, 0, 0, 0.2) -2px -2px 5px, 
+    rgba(0, 0, 0, 0.2) 1px 1px 1px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -831,6 +845,12 @@ h1.reloj{
     font-weight: 800;
     color: var(--subtitulos-color);
     font-size: var(--hora);
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 1px, 
+    rgba(0, 0, 0, 0.5) 1px 1px 1px, 
+    rgba(0, 0, 0, 0.75) 3px 3px 3px, 
+    rgba(0, 0, 0, 0.4) 3px 3px 3px, 
+    rgba(0, 0, 0, 0.2) -2px -2px 5px, 
+    rgba(0, 0, 0, 0.2) 1px 1px 1px ;
 }
 
 /* MARK: Botones */
@@ -847,7 +867,7 @@ h1.reloj{
     color: var(--boton-texto-color);
     padding: 2vw 4vw;
     border-radius: 2vw;
-    width: 25%;
+    width: 36%;
 }
 
 /* MARK: Texto - img */

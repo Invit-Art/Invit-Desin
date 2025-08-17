@@ -98,6 +98,8 @@ function Invitacion3({ totalInvitadosInvitacion }) {
     "querido invitado"
   ].includes(nombreNormalizado);
 
+  
+
   useEffect(() => {
     // Solo consultar Firestore si NO hay nombre en localStorage
     if (localStorage.getItem("nombreInvitado")) return;
@@ -154,6 +156,7 @@ function Invitacion3({ totalInvitadosInvitacion }) {
 
   return (
   <>
+    <div className="invitacion3">
     <AudioController />
     {mostrarSobre && (
       <div className={`sobre ${sobreAbierto ? "abierto" : ""}`} translate="no">
@@ -364,6 +367,7 @@ function Invitacion3({ totalInvitadosInvitacion }) {
           />
           {/* <Separador3/> */}
         </div>}
+    </div>
     </div>
   </>
 );
